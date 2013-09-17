@@ -3,7 +3,7 @@ import java.util.Iterator;
 
 class CircularList {
 
-    // Construct an empty circular list with fixed number of elements
+    // Construct an empty circular list with maximum number of elements
     public CircularList(int elements) {
     }
 
