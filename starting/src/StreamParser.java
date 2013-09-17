@@ -3,8 +3,8 @@ import java.util.List;
 
 
 public class StreamParser {
-    final static String numvalString = "NumVals: ";
-    final static String baseString = "Base: ";
+    final static String NUMVALS_STRING = "NumVals: ";
+    final static String BASE_STRING = "Base: ";
     
     /**
      * Takes in a stream with the number of integers that will be encountered, optionally the base, and then a series
@@ -17,7 +17,7 @@ public class StreamParser {
     public static ArrayList<Integer> parseStream(String inputStream) {
         
         // find the number of values we will see first.
-        int intStart = numvalString.length();
+        int intStart = NUMVALS_STRING.length();
         int curIndex = intStart;
         char curChar = inputStream.charAt(curIndex);
         // parse based on the space.
@@ -45,8 +45,8 @@ public class StreamParser {
         int base = 16;
         int baseIntEnd = intEnd;
         // find the base if it exists
-        if (baseString.equals(inputStream.substring(intEnd+1, intEnd + 1 + baseString.length()))) {
-            int baseIntStart = intEnd + 1 + baseString.length();
+        if (BASE_STRING.equals(inputStream.substring(intEnd+1, intEnd + 1 + BASE_STRING.length()))) {
+            int baseIntStart = intEnd + 1 + BASE_STRING.length();
             curIndex = baseIntStart;
             curChar = inputStream.charAt(curIndex);
             // paste based on whitespace
